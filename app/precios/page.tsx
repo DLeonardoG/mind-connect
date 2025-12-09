@@ -1,8 +1,9 @@
-import Link from "next/link"
+import { Logo } from "@/components/logo"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Heart, Check } from "lucide-react"
+import { Check } from "lucide-react"
+import Link from "next/link"
 
 const planes = [
   {
@@ -62,7 +63,7 @@ export default function PreciosPage() {
       <header className="border-b border-border bg-card">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Heart className="h-8 w-8 text-primary fill-primary" />
+            <Logo size="md" />
             <span className="text-2xl font-semibold text-foreground">MindConnect</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6">

@@ -1,9 +1,10 @@
+import { Logo } from "@/components/logo"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Badge } from "@/components/ui/badge"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Search, Filter, Star, Video, MapPin, Calendar, Heart } from "lucide-react"
+import { Calendar, Filter, MapPin, Search, Star, Video } from "lucide-react"
 import Link from "next/link"
 
 export default function PatientDashboard() {
@@ -65,10 +66,10 @@ export default function PatientDashboard() {
       {/* Header */}
       <header className="border-b border-border bg-card sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Heart className="h-8 w-8 text-primary fill-primary" />
+          <Link href="/" className="flex items-center gap-2">
+            <Logo size="md" />
             <span className="text-2xl font-semibold">MindConnect</span>
-          </div>
+          </Link>
           <nav className="flex items-center gap-6">
             <Link href="/paciente/dashboard" className="text-sm font-medium text-foreground">
               Buscar

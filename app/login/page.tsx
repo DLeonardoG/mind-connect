@@ -1,9 +1,9 @@
-import Link from "next/link"
+import { Logo } from "@/components/logo"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Heart } from "lucide-react"
+import Link from "next/link"
 
 export default function LoginPage() {
   return (
@@ -12,7 +12,7 @@ export default function LoginPage() {
       <header className="border-b border-border bg-card">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Heart className="h-8 w-8 text-primary fill-primary" />
+            <Logo size="md" />
             <span className="text-2xl font-semibold text-foreground">MindConnect</span>
           </Link>
           <Button variant="ghost" asChild>

@@ -1,7 +1,8 @@
-import Link from "next/link"
+import { Logo } from "@/components/logo"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Heart, Video, Calendar, Shield, Clock, Star } from "lucide-react"
+import { Calendar, Clock, Heart, Shield, Star, Video } from "lucide-react"
+import Link from "next/link"
 
 export default function LandingPage() {
   return (
@@ -9,24 +10,24 @@ export default function LandingPage() {
       {/* Header */}
       <header className="border-b border-border bg-card">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Heart className="h-8 w-8 text-primary fill-primary" />
+          <Link href="/" className="flex items-center gap-2">
+            <Logo size="md" />
             <span className="text-2xl font-semibold text-foreground">MindConnect</span>
-          </div>
+          </Link>
           <nav className="hidden md:flex items-center gap-6">
             <Link
               href="#como-funciona"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors scroll-smooth"
             >
               Cómo Funciona
             </Link>
             <Link
-              href="#especialistas"
+              href="/buscar-especialistas"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Especialistas
             </Link>
-            <Link href="#precios" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link href="/precios" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Precios
             </Link>
           </nav>
@@ -158,10 +159,10 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Heart className="h-6 w-6 text-primary fill-primary" />
+              <Link href="/" className="flex items-center gap-2 mb-4">
+                <Logo size="sm" />
                 <span className="text-lg font-semibold">MindConnect</span>
-              </div>
+              </Link>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Conectando personas con profesionales de la salud mental
               </p>
@@ -170,17 +171,17 @@ export default function LandingPage() {
               <h4 className="font-semibold mb-4 text-card-foreground">Plataforma</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link href="#como-funciona" className="hover:text-foreground transition-colors">
                     Cómo Funciona
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link href="/buscar-especialistas" className="hover:text-foreground transition-colors">
                     Especialistas
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link href="/precios" className="hover:text-foreground transition-colors">
                     Precios
                   </Link>
                 </li>
